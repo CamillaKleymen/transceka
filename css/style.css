@@ -55,6 +55,8 @@
     width: 100%;
 }
 
+
+
 .services-box {
     position: absolute;
     display: flex;
@@ -88,4 +90,10 @@
 
 .btn-dark:hover {
     background-color: var(--bg-gray) !important;
+}
+
+
+.clients-logos {
+    height: 100px; 
+    object-fit: contain;
 }
