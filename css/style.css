@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+ :root {
+     --text-white: #fff;
+     --text-muted: #a8b2d1;
+     --text-gray: #333;
+     --text-dark: #242424;
+     --light-gray: #f8f9fa;
+     --dark-gray: #333333;
+     --bg-corp: #BD1F2E;
+     --bg-gray: #585858;
+     --bg-overlay: #BF141E;
+ }
+
+
+
+ .carousel-caption {
+     left: 10%;
+     right: 10%;
+     bottom: 35%;
+ }
+
+ .index-banner {
+     position: relative;
+ }
+
+ .carousel-inner {
+     height: 600px;
+ }
+
+ .bg-truck {
+     background-image: url('../images/index/suhoputniye.png');
+     background-size: cover;
+     background-position: center;
+     height: 100%;
+     width: 100%;
+ }
+ 
+ .bg-avia {
+    background-image: url('../images/index/avia.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-ship {
+    background-image: url('../images/index/sea_transportation.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.services-box {
+    position: absolute;
+    display: flex;
+    top: 75%;
+    z-index: 5;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 15%;
+}
+
+.hover:hover {
+    background-color:  var(--bg-overlay) !important;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-white); /* Optional: Change text color for better visibility */
+}
+
+
+.btn-danger {
+    background-color: var(--bg-corp) !important;
+}
+
+.btn-danger:hover {
+    background-color: var(--bg-overlay) !important;
+}
