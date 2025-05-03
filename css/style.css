@@ -58,7 +58,7 @@
 .services-box {
     position: absolute;
     display: flex;
-    top: 75%;
+    top: 80%;
     z-index: 5;
     justify-content: center;
     left: 50%;
@@ -80,4 +80,12 @@
 
 .btn-danger:hover {
     background-color: var(--bg-overlay) !important;
+}
+
+.btn-dark {
+    background-color: var(--text-gray) !important;
+}
+
+.btn-dark:hover {
+    background-color: var(--bg-gray) !important;
 }
