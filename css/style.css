@@ -11,10 +11,17 @@
      --light-gray: #f8f9fa;
      --dark-gray: #333333;
      --bg-corp: #BD1F2E;
-     --bg-gray: #585858;
+     --bg-gray: #333333;
      --bg-overlay: #BF141E;
  }
 
+.w-60 {
+    width: 60px;
+}
+
+.h-60 {
+    height: 60px;    
+}
 
 
  .carousel-caption {
@@ -55,7 +62,21 @@
     width: 100%;
 }
 
+.bg-avia2 {
+    background-image: url('../images/index/avia2.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
 
+.bg-danger {
+    background-color: var(--bg-corp) !important;
+}
+
+.bg-gray {
+    background-color: var(--bg-gray) !important;
+}
 
 .services-box {
     position: absolute;
