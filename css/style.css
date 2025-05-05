@@ -3,50 +3,66 @@
 
 
 
- :root {
-     --text-white: #fff;
-     --text-muted: #a8b2d1;
-     --text-gray: #333;
-     --text-dark: #242424;
-     --light-gray: #f8f9fa;
-     --dark-gray: #333333;
-     --bg-corp: #BD1F2E;
-     --bg-gray: #333333;
-     --bg-overlay: #BF141E;
- }
+:root {
+    --text-white: #fff;
+    --text-muted: #a8b2d1;
+    --text-gray: #333;
+    --text-dark: #242424;
+    --light-gray: #f8f9fa;
+    --dark-gray: #333333;
+    --bg-corp: #BD1F2E;
+    --bg-gray: #333333;
+    --bg-overlay: #BF141E;
+}
 
 .w-60 {
     width: 60px;
 }
 
 .h-60 {
-    height: 60px;    
+    height: 60px;
+}
+
+header .nav-link {
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.2s ease-in-out;
+}
+
+header .nav-link:hover {
+    color: #c00;
+    /* акцентный цвет */
+}
+
+header .dropdown-menu {
+    font-size: 15px;
 }
 
 
- .carousel-caption {
-     left: 10%;
-     right: 10%;
-     bottom: 35%;
- }
 
- .index-banner {
-     position: relative;
- }
+.carousel-caption {
+    left: 10%;
+    right: 10%;
+    bottom: 35%;
+}
 
- .carousel-inner {
-     height: 600px;
- }
+.index-banner {
+    position: relative;
+}
 
- .bg-truck {
-     background-image: url('../images/index/suhoputniye.png');
-     background-size: cover;
-     background-position: center;
-     height: 100%;
-     width: 100%;
- }
- 
- .bg-avia {
+.carousel-inner {
+    height: 600px;
+}
+
+.bg-truck {
+    background-image: url('../images/index/suhoputniye.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-avia {
     background-image: url('../images/index/avia.png');
     background-size: cover;
     background-position: center;
@@ -91,9 +107,10 @@
 }
 
 .hover:hover {
-    background-color:  var(--bg-overlay) !important;
+    background-color: var(--bg-overlay) !important;
     transition: all 0.3s ease-in-out;
-    color: var(--text-white); /* Optional: Change text color for better visibility */
+    color: var(--text-white);
+    /* Optional: Change text color for better visibility */
 }
 
 
@@ -115,6 +132,6 @@
 
 
 .clients-logos {
-    height: 100px; 
+    height: 100px;
     object-fit: contain;
 }
