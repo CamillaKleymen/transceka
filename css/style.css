@@ -15,6 +15,14 @@
     --bg-overlay: #BF141E;
 }
 
+.w-65 {
+    width: 65%;
+}
+
+.h-90 {
+    height: 90%;
+}
+
 .w-60 {
     width: 60px;
 }
