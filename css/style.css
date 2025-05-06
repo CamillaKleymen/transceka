@@ -13,6 +13,7 @@
     --bg-corp: #BD1F2E;
     --bg-gray: #333333;
     --bg-overlay: #BF141E;
+    --light-gray: #444;
 }
 
 .w-65 {
@@ -102,12 +103,29 @@ header .dropdown-menu {
     width: 100%;
 }
 
+
+.bg-form {
+    background-image: url('../images/faq & contact form/form.png');
+    position: absolute;
+    top: 15%;
+    z-index: 5;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 40%;
+
+}
+
+
 .bg-danger {
     background-color: var(--bg-corp) !important;
 }
 
 .bg-gray {
     background-color: var(--bg-gray) !important;
+}
+
+.bg-light-gray {
+    background-color: var(--light-gray) !important;
 }
 
 .services-box {
@@ -150,4 +168,14 @@ header .dropdown-menu {
 .clients-logos {
     height: 100px;
     object-fit: contain;
+}
+
+
+.contact-form {
+    position: absolute;
+    top: 15%;
+    z-index: 5;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 40%;
 }
