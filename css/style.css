@@ -203,8 +203,24 @@ header .dropdown-menu {
         overflow-x: hidden;
     }
 
-    .carousel-inner {
-        height: 300px;
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h5 {
+        font-size: 26px;
+    }    
+
+    h6 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
     }
 
     .bg-form {
