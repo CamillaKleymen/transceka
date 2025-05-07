@@ -108,11 +108,10 @@ header .dropdown-menu {
     background-image: url('../images/faq & contact form/form.png');
     position: absolute;
     top: 15%;
-    z-index: 5;
+    z-index: 3;
     left: 65%;
     transform: translateX(-50%);
     width: 40%;
-
 }
 
 
@@ -172,10 +171,71 @@ header .dropdown-menu {
 
 
 .contact-form {
-    position: absolute;
-    top: 15%;
-    z-index: 5;
-    left: 65%;
-    transform: translateX(-50%);
-    width: 40%;
+    background-image: url('../images/faq & contact form/form.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    height: 100%; /* важно — тянем фон на всю форму */
+    min-height: 400px; /* чтобы форма не сжималась сильно */
+}
+
+.contact-form .form-control {
+    background-color: rgba(255, 255, 255, 0.95); /* белый фон на input, но чуть прозрачный */
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-color: #333; /* при фокусе — тёмно-серая рамка */
+}
+
+.contact-form button {
+    border-radius: 0;
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .bg-form {
+        top: 10%;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .services-box {
+        top: 90%;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    header .nav-link {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .contact-form {
+        padding: 10px;
+        min-height: 300px;
+    }
+
+    .contact-form .form-control {
+        font-size: 14px;
+    }
+
+    .clients-logos {
+        height: 60px;
+    }
 }
