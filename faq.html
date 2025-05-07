@@ -104,11 +104,12 @@
         </div>
     </section>
 
+    <!-- faq -->
     <section>
-        <div class="container py-5">
+        <div class="container py-5 d-none d-md-block">
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
+                    <h2 class="accordion-header fs-2" id="headingOne">
                         <button class="accordion-button rounded-0 bg-danger text-white fw-bold" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                             aria-controls="collapseOne" style="color: white;">
@@ -204,8 +205,108 @@
         </div>
     </section>
 
-    <!-- footer -->
-    <section class="bg-gray px-5">
+
+    <!-- faq {mobile}-->
+    <section>
+        <div class="container py-5 d-md-none">
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button rounded-0 bg-danger text-white fw-bold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne" style="color: white;">
+                            Какие виды транспорта вы используете?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Мы используем различные виды транспорта, включая автомобильный, железнодорожный, авиа,
+                            морской и мультимодальный транспорт, в зависимости от потребностей клиента и специфики
+                            груза.
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed rounded-0 bg-danger text-white fw-bold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            Какие услуги вы предоставляете?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Мы предоставляем услуги по международным и местным грузоперевозкам, включая таможенное
+                            оформление, складские услуги, страхование грузов, брокерский услуги, а также консультации по
+                            логистике.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed rounded-0 bg-danger text-white fw-bold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            Какие сроки доставки вы предлагаете?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Сроки доставки зависят от конкретного маршрута и вида транспорта. Мы стремимся
+                            минимизировать сроки доставки, при этом обеспечить сохранность груза.
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed rounded-0 bg-danger text-white fw-bold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            Какие направления вы обслуживаете?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Мы осуществляем грузоперевозки как внутри страны, так и за ее пределами, в том числе в
+                            страны СНГ, России, Европы и Азии.
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed rounded-0 bg-danger text-white fw-bold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                            aria-controls="collapseFive">
+                            Какие виды сборных грузов перевозите?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Мы обслуживаем широкий спектр сборных грузов, включая грузы опасной, температурно-режимной и
+                            негабаритной категорий. Наша компания готова обеспечить перевозку практически любого вида
+                            сборного груза в соответствии с потребностями клиента.
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- footer -->
+      <section class="bg-gray px-5 d-none d-md-block">
         <div class="container-fluid px-5 text-white py-4">
             <div class="row align-items-center justify-content-between px-5">
                 <div class="col-md-3 text-start">
@@ -237,6 +338,32 @@
             </div>
         </div>
     </section>
+
+     <!-- footer -->
+     <section class="bg-gray px-5 d-md-none">
+        <div class="container-fluid px-5 text-white py-4">
+            <div class="flex-column align-items-center justify-content-between px-5">
+                <div class="col text-start">
+                    <img src="images/index/logo-footer.png" class="img-fluid w-100" alt="Transceka Logo">
+                </div>
+                
+                <div class="col text-center mt-5">
+                    <div class="d-flex justify-content-center gap-3 align-items-center">
+                        <a href="#" class="text-white text-decoration-none mx-1">
+                            <i class="bi bi-telegram fs-1"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none mx-1">
+                            <i class="bi bi-facebook fs-1"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none mx-1">
+                            <i class="bi bi-youtube fs-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- js connections -->
