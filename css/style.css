@@ -14,6 +14,7 @@
     --bg-gray: #333333;
     --bg-overlay: #BF141E;
     --light-gray: #444;
+    --bg-corp-gray: #464646; 
 }
 
 .w-65 {
@@ -47,7 +48,9 @@ header .dropdown-menu {
     font-size: 15px;
 }
 
-
+.bg-corp-gray {
+    background-color: var(--bg-corp-gray) !important;   
+}
 
 .carousel-caption {
     left: 10%;
@@ -175,19 +178,30 @@ header .dropdown-menu {
     background-size: cover;
     background-position: center;
     padding: 20px;
-    height: 100%; /* важно — тянем фон на всю форму */
-    min-height: 400px; /* чтобы форма не сжималась сильно */
+    height: 54%;
+    min-height: 400px;
+    position: absolute;
+    z-index: 1;
+    width: 685px;
+    right: 0;
+}
+
+
+.main-form {
+    position: relative;
+    z-index: 2;
+    background: transparent;
 }
 
 .contact-form .form-control {
-    background-color: rgba(255, 255, 255, 0.95); /* белый фон на input, но чуть прозрачный */
+    background-color: rgba(255, 255, 255, 0.95); 
     border: 1px solid #ccc;
     color: #000;
 }
 
 .contact-form .form-control:focus {
     box-shadow: none;
-    border-color: #333; /* при фокусе — тёмно-серая рамка */
+    border-color: #333; 
 }
 
 .contact-form button {
