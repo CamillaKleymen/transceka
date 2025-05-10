@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Мой проект')</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--  CSS -->
+    <link rel="stylesheet"  href="{{ asset('css/style.css') }}">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+</head>
+
+
+
+<body>
+
+    <!-- header -->
+    <header class="bg-white border-bottom">
+        <div class="container-fluid py-3">
+            <div class="d-flex align-items-center justify-content-center gap-5 py-3">
+                <a href="#" class="d-block pe-5 me-5">
+                    <img src="images/index/logo_header.png" alt="TRANSCEKA LOGISTIC SERVICES" height="70">
+                </a>
+                <nav class="navbar navbar-expand-lg navbar-light ps-5 p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between w-100" id="navbarNav">
+                        <ul class="navbar-nav gap-5">
+                            <li class="nav-item ps-3">
+                                <a class="nav-link w-100 h-100 d-flex align-items-center justify-content-center text-dark fw-semibold"
+                                    href="#">Главная страница</a>
+                            </li>
+                            <li class="nav-item ps-3">
+                                <a class="nav-link w-100 h-100 d-flex align-items-center justify-content-center text-dark fw-semibold"
+                                    href="#">О компании</a>
+                            </li>
+                            <li class="nav-item dropdown ps-3">
+                                <a class="nav-link dropdown-toggle w-100 h-100 d-flex align-items-center justify-content-center text-dark fw-semibold"
+                                    href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Услуги
+                                </a>
+                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" href="#">Сухопутные перевозки</a></li>
+                                    <li><a class="dropdown-item" href="#">Авиаперевозки</a></li>
+                                    <li><a class="dropdown-item" href="#">Мультимодальные перевозки</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item ps-3">
+                                <a class="nav-link w-100 h-100 d-flex align-items-center justify-content-center text-dark fw-semibold"
+                                    href="#">Сертификаты</a>
+                            </li>
+                            <li class="nav-item ps-3">
+                                <a class="nav-link w-100 h-100 d-flex align-items-center justify-content-center text-dark fw-semibold"
+                                    href="#">Вопросы и ответы</a>
+                            </li>
+                            <li class="nav-item ps-3">
+                                <a class="nav-link w-100 h-100 d-flex align-items-center justify-content-center text-dark fw-semibold"
+                                    href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- banner + types of services -->
+    <section class="index-banner position-relative d-none d-md-block">
+        <div class="container-fluid px-0">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active h-100">
+                        <img src="images/index/banner.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-uppercase fs-2 fw-bold pe-lg-5">ГРУЗОВЫЕ И СУХОПУТНЫЕ ПЕРЕВОЗКИ</h1>
+                            <p class="fs-6 fw-bold mb-lg-4 pe-lg-5">Transceka — международная транспортная компания по
+                                перевозке грузов <br> с индивидуальным подходом к решению Вашей задачи.</p>
+                            <a class="btn btn-danger w-25 mt-3 rounded-0 px-4 py-2" href="/services">Оставить заявку
+                                сейчас</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images/index/truck.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-uppercase fs-2 fw-bold pe-lg-5">ГРУЗОВЫЕ И СУХОПУТНЫЕ ПЕРЕВОЗКИ</h1>
+                            <p class="fs-6 fw-bold mb-lg-4 pe-lg-5">Transceka — международная транспортная компания по
+                                перевозке грузов <br> с индивидуальным подходом к решению Вашей задачи.</p>
+                            <a class="btn btn-danger w-25 mt-3 rounded-0 px-4 py-2" href="/services">Оставить заявку
+                                сейчас</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images/index/containers.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-uppercase fs-2 fw-bold pe-lg-5">ГРУЗОВЫЕ И СУХОПУТНЫЕ ПЕРЕВОЗКИ</h1>
+                            <p class="fs-6 fw-bold mb-lg-4 pe-lg-5">Transceka — международная транспортная компания по
+                                перевозке грузов <br> с индивидуальным подходом к решению Вашей задачи.</p>
+                            <a class="btn btn-danger w-25 mt-3 rounded-0 px-4 py-2" href="/services">Оставить заявку
+                                сейчас</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- types of services -->
+            <div class="container-fluid">
+                <div class="row gx-0 g-0 px-5 services-box">
+
+                    <div class="col-lg-3 mb-4">
+                        <a href="/land-transport" class="text-white text-decoration-none">
+                            <div
+                                class="bg-truck text-white d-flex flex-column justify-content-center align-items-start px-5 w-100 h-100 hover">
+                                <div class="mb-3 text-start">
+                                    <i class="bi bi-truck fs-1"></i>
+                                </div>
+                                <h3 class="text-uppercase fs-5 mb-3 text-start">СУХОПУТНЫЕ<br>ПЕРЕВОЗКИ (ДОГРУЗЫ)</h3>
+                                <a href="/land-transport" class="text-white text-decoration-none">Подробнее</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <a href="/air-transport" class="text-white text-decoration-none">
+                            <div
+                                class="bg-avia text-white d-flex flex-column justify-content-center align-items-start px-5 w-100 h-100 hover">
+                                <div class="mb-3 text-start">
+                                    <i class="bi bi-airplane fs-1"></i>
+                                </div>
+                                <h3 class="text-uppercase fs-5 mb-3 text-start">АВИАПЕРЕВОЗКИ</h3>
+                                <a href="/air-transport" class="text-white text-decoration-none">Подробнее</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <a href="/multimodal-transport" class="text-white text-decoration-none">
+                            <div
+                                class="bg-ship text-white d-flex flex-column justify-content-center align-items-start px-5 w-100 h-100 hover">
+                                <div class="mb-3 text-start">
+                                    <i class="bi bi-tsunami fs-1"></i>
+                                </div>
+                                <h3 class="text-uppercase fs-5 mb-3 text-start">МУЛЬТИМОДАЛЬНЫЕ<br>ПЕРЕВОЗКИ</h3>
+                                <a href="/multimodal-transport" class="text-white text-decoration-none">Подробнее</a>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-lg-3 mb-4">
+                        <div class="bg-light d-block w-100 p-4 text-start">
+                            <h6 class="text-uppercase fw-bold mb-3">ОТСЛЕЖИВАНИЕ ПО ТРЕК-НОМЕРУ</h6>
+                            <p class="small mb-3">Введите трек-номер вашего груза и мы покажем историю его передвижений
+                            </p>
+                            <form class="d-flex flex-column">
+                                <input type="text" class="form-control mb-3" placeholder="Введите трек-номер">
+                                <button type="submit" class="btn btn-danger rounded-0 w-100">Найти <i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- banner + types of services {mobile version} -->
+    <section class="index-banner  d-md-none">
+        <div class="container-fluid px-0">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active h-100">
+                        <img src="images/index/banner.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-uppercase fs-2 fw-bold pe-lg-5">ГРУЗОВЫЕ И СУХОПУТНЫЕ ПЕРЕВОЗКИ</h1>
+                            <p class="fs-6 fw-bold mb-lg-4 pe-lg-5">Transceka — международная транспортная компания по
+                                перевозке грузов с индивидуальным подходом к решению Вашей задачи.</p>
+                            <a class="btn btn-danger w-100 mt-3 rounded-0 px-4 py-2" href="/services">Оставить заявку
+                                сейчас</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images/index/truck.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-uppercase fs-2 fw-bold pe-lg-5">ГРУЗОВЫЕ И СУХОПУТНЫЕ ПЕРЕВОЗКИ</h1>
+                            <p class="fs-6 fw-bold mb-lg-4 pe-lg-5">Transceka — международная транспортная компания по
+                                перевозке грузов с индивидуальным подходом к решению Вашей задачи.</p>
+                            <a class="btn btn-danger w-100 mt-3 rounded-0 px-4 py-2" href="/services">Оставить заявку
+                                сейчас</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images/index/containers.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-uppercase fs-2 fw-bold pe-lg-5">ГРУЗОВЫЕ И СУХОПУТНЫЕ ПЕРЕВОЗКИ</h1>
+                            <p class="fs-6 fw-bold mb-lg-4 pe-lg-5">Transceka — международная транспортная компания по
+                                перевозке грузов с индивидуальным подходом к решению Вашей задачи.</p>
+                            <a class="btn btn-danger w-100 mt-3 rounded-0 px-4 py-2" href="/services">Оставить заявку
+                                сейчас</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- types of services -->
+            <div class="w-100">
+                <div class="flex-column gx-0 g-0">
+
+                    <div class="col">
+                        <a href="/land-transport" class="text-white text-decoration-none">
+                            <div
+                                class="bg-truck text-white d-flex flex-column justify-content-center align-items-start px-5 w-100 h-100 py-5 hover">
+                                <div class="mb-3 text-start">
+                                    <i class="bi bi-truck fs-1"></i>
+                                </div>
+                                <h3 class="text-uppercase fs-5 mb-3 text-start">СУХОПУТНЫЕ<br>ПЕРЕВОЗКИ (ДОГРУЗЫ)</h3>
+                                <a href="/land-transport" class="text-white text-decoration-none">Подробнее</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/air-transport" class="text-white text-decoration-none">
+                            <div
+                                class="bg-avia text-white d-flex flex-column justify-content-center align-items-start px-5 w-100 h-100 py-5 hover">
+                                <div class="mb-3 text-start">
+                                    <i class="bi bi-airplane fs-1"></i>
+                                </div>
+                                <h3 class="text-uppercase fs-5 mb-3 text-start">АВИАПЕРЕВОЗКИ</h3>
+                                <a href="/air-transport" class="text-white text-decoration-none">Подробнее</a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/multimodal-transport" class="text-white text-decoration-none">
+                            <div
+                                class="bg-ship text-white d-flex flex-column justify-content-center align-items-start px-5 w-100 h-100 py-5 hover">
+                                <div class="mb-3 text-start">
+                                    <i class="bi bi-tsunami fs-1"></i>
+                                </div>
+                                <h3 class="text-uppercase fs-5 mb-3 text-start">МУЛЬТИМОДАЛЬНЫЕ<br>ПЕРЕВОЗКИ</h3>
+                                <a href="/multimodal-transport" class="text-white text-decoration-none">Подробнее</a>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-lg-3 mb-4">
+                        <div class="bg-light d-block w-100 p-4 text-start">
+                            <h6 class="text-uppercase fw-bold mb-3">ОТСЛЕЖИВАНИЕ ПО ТРЕК-НОМЕРУ</h6>
+                            <p class="small mb-3">Введите трек-номер вашего груза и мы покажем историю его передвижений
+                            </p>
+                            <form class="d-flex flex-column">
+                                <input type="text" class="form-control mb-3" placeholder="Введите трек-номер">
+                                <button type="submit" class="btn btn-danger rounded-0 w-100">Найти <i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- about -->
+    <section class="about-section py-5 mt-5 pt-5 d-none d-md-block">
+        <div class="container-fluid px-0 mt-5 pt-5">
+            <div class="row g-0 align-items-center ">
+                <div class="col-lg-6 bg-light d-flex align-items-center justify-content-center">
+                    <div class="p-5 w-75">
+                        <h2 class="fw-bold text-dark mb-4">О компании</h2>
+                        <p class="text-muted mb-3">Нам доверяют свои грузы более 500 тысяч клиентов — от небольших
+                            организаций и частных лиц, до компаний крупного масштаба.</p>
+                        <p class="text-muted">Имея развитую сеть, мы организуем доставку сборных грузов из любой точки,
+                            а также в обратном направлении в практически любую точку СНГ.</p>
+                        <a href="#more-about" class="btn btn-dark w-25 rounded-0 px-4 py-2 mt-3">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/index/about-add-component.png" class="img-fluid w-75 h-75 object-fit-cover"
+                        alt="О компании">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about {mobile version}-->
+    <section class="about-section py-5 d-md-none">
+        <div class="container-fluid px-5 mt-5 ">
+            <div class="row g-0 align-items-center ">
+                <div class="col bg-light d-flex align-items-center justify-content-center">
+                    <div class="p-2">
+                        <h2 class="fw-bold text-dark mb-4">О компании</h2>
+                        <p class="text-muted mb-3">Нам доверяют свои грузы более 500 тысяч клиентов — от небольших
+                            организаций и частных лиц, до компаний крупного масштаба.</p>
+                        <p class="text-muted">Имея развитую сеть, мы организуем доставку сборных грузов из любой точки,
+                            а также в обратном направлении в практически любую точку СНГ.</p>
+                        <a href="#more-about" class="btn btn-dark w-100 rounded-0 py-2 mt-3">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- our clients  -->
+    <section class="py-5">
+        <div class="container-fluid px-5">
+            <h2 class="text-start px-5 fw-bold mb-5">Наши клиенты</h2>
+            <div class="slider d-flex justify-content-center align-items-center">
+                <div class="px-3">
+                    <img src="images/index/makro.png" class="img-fluid clients-logos" alt="Makro">
+                </div>
+                <div class="px-3">
+                    <img src="images/index/akfa.png" class="img-fluid clients-logos" alt="Akfa">
+                </div>
+                <div class="px-3">
+                    <img src="images/index/korzinka.png" class="img-fluid clients-logos" alt="Korzinka">
+                </div>
+                <div class="px-3">
+                    <img src="images/index/texnopark.png" class="img-fluid clients-logos" alt="Texnopark">
+                </div>
+                <div class="px-3">
+                    <img src="images/index/imzo.png" class="img-fluid clients-logos" alt="Imzo">
+                </div>
+                <div class="px-3">
+                    <img src="images/index/artel.png" class="img-fluid clients-logos" alt="Artel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our services -->
+    <section class="py-5 bg-light d-none d-md-block">
+        <div class="container-fluid px-5 ">
+            <div class="row justify-content-center text-start px-5 mb-5">
+                <h2 class="fw-bold text-uppercase mb-3">Наши услуги</h2>
+                <p class="text-muted fs-5">
+                    Мы предлагаем широкий спектр услуг, чтобы удовлетворить все ваши потребности в логистике.
+                </p>
+            </div>
+
+            <div class="row g-4 px-5">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body text-start">
+                            <i class="bi bi-truck display-4 text-black mb-3"></i>
+                            <h5 class="card-title fw-bold text-uppercase  pt-2 mb-3">сухопутные
+                                перевозки (ДОГРУЗЫ)</h5>
+                            <p class="card-text text-black">Каждую пятницу из Москвы отправляются догрузы на территорию
+                                Республики Узбекистан
+                            </p>
+                        </div>
+                        <div
+                            class="card-footer bg-transparent border-0 mt-5 pt-5 border border-bottom border-danger border-3 text-start">
+                            <a href="/land-transport"
+                                class="btn btn-outline-light text-dark mb-3 rounded-0">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-avia border-0 shadow h-100">
+                        <div class="card-body text-start">
+                            <i class="bi bi-airplane display-4 text-white mb-3"></i>
+                            <h5 class="card-title fw-bold text-white  pt-2 text-uppercase mb-3">авиаперевозки</h5>
+                            <p class="card-text text-white">Способ транспортировки грузов и перевозки пассажиров при
+                                помощи воздушных судов.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0  mt-5 pt-5 text-start">
+                            <a href="/air-transport"
+                                class="btn btn-outline-light border-0 bg-transparent rounded-0">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body text-start">
+                            <i class="bi bi-tsunami display-4 text-black mb-3"></i>
+                            <h5 class="card-title fw-bold text-uppercase pt-2 mb-3">МУЛЬТИМОДАЛЬНЫЕ
+                                перевозки</h5>
+                            <p class="card-text text-black">Транспортировка любых грузов двумя или более видами
+                                транспорта, организует которую одна компания.</p>
+                        </div>
+                        <div
+                            class="card-footer bg-transparent border-0  mt-5 pt-5 border border-bottom border-danger border-3 text-start">
+                            <a href="/multimodal-transport"
+                                class="btn btn-outline-light text-dark rounded-0 mb-3">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- our services {mobile} -->
+    <section class="py-5 bg-light d-md-none">
+        <div class="container-fluid">
+            <div class="row justify-content-center text-start px-3 mb-5">
+                <h2 class="fw-bold text-uppercase mb-3">Наши услуги</h2>
+                <p class="text-muted fs-5">
+                    Мы предлагаем широкий спектр услуг, чтобы удовлетворить все ваши потребности в логистике.
+                </p>
+            </div>
+
+            <div class="flex-column w-100">
+                <div class="col">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body text-start">
+                            <i class="bi bi-truck display-4 text-black mb-3"></i>
+                            <h5 class="card-title fw-bold text-uppercase  pt-2 mb-3">сухопутные
+                                перевозки (ДОГРУЗЫ)</h5>
+                            <p class="card-text text-black">Каждую пятницу из Москвы отправляются догрузы на территорию
+                                Республики Узбекистан
+                            </p>
+                        </div>
+                        <div
+                            class="card-footer bg-transparent border-0 mt-5 pt-5 border border-bottom border-danger border-3 text-start">
+                            <a href="/land-transport"
+                                class="btn btn-outline-light text-dark mb-3 rounded-0">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-avia border-0 shadow h-100">
+                        <div class="card-body text-start">
+                            <i class="bi bi-airplane display-4 text-white mb-3"></i>
+                            <h5 class="card-title fw-bold text-white  pt-2 text-uppercase mb-3">авиаперевозки</h5>
+                            <p class="card-text text-white">Способ транспортировки грузов и перевозки пассажиров при
+                                помощи воздушных судов.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0  mt-5 pt-5 text-start">
+                            <a href="/air-transport"
+                                class="btn btn-outline-light border-0 bg-transparent rounded-0">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body text-start">
+                            <i class="bi bi-tsunami display-4 text-black mb-3"></i>
+                            <h5 class="card-title fw-bold text-uppercase pt-2 mb-3">МУЛЬТИМОДАЛЬНЫЕ
+                                перевозки</h5>
+                            <p class="card-text text-black">Транспортировка любых грузов двумя или более видами
+                                транспорта, организует которую одна компания.</p>
+                        </div>
+                        <div
+                            class="card-footer bg-transparent border-0  mt-5 pt-5 border border-bottom border-danger border-3 text-start">
+                            <a href="/multimodal-transport"
+                                class="btn btn-outline-light text-dark rounded-0 mb-3">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our working process -->
+    <section class="py-5 px-5 d-none d-md-block">
+        <div class="container-fluid px-5">
+            <h2 class="fw-bold text-uppercase mb-3">Как мы работаем?</h2>
+            <p>Мы стремимся понять потребности наших клиентов и предложить им решения, которые будут <br>
+                соответствовать их
+                целям.</p>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="d-flex mb-4">
+                        <span
+                            class="flex-shrink-0 bg-danger rounded-circle text-white d-flex align-items-center justify-content-center w-60 h-60">
+                            <i class="bi bi-file-earmark-text fs-3"></i>
+                        </span>
+                        <div class="ms-3">
+                            <h5 class="fw-bold">Заявка на услугу</h5>
+                            <p class="mb-0">Оставьте заявку на сайте или позвоните нам по телефону. Мы свяжемся с вами и
+                                обсудим все детали перевозки груза.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div
+                            class="flex-shrink-0 bg-danger rounded-circle text-white d-flex align-items-center justify-content-center w-60 h-60">
+                            <i class="bi bi-question-circle fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold">Расчет стоимости</h5>
+                            <p class="mb-0">Мы обсудим все нюансы транспортировки груза, подберём технику для выполнения
+                                задачи и рассчитаем стоимость услуги.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div
+                            class="flex-shrink-0 bg-danger rounded-circle text-white d-flex align-items-center justify-content-center w-60 h-60">
+                            <i class="bi bi-file-earmark-check fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold">Заключение договора</h5>
+                            <p class="mb-0">Основной частью работы с нашими клиентами является подписание договора по
+                                получению услуги.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div
+                            class="flex-shrink-0 bg-danger rounded-circle text-white d-flex align-items-center justify-content-center w-60 h-60">
+                            <i class="bi bi-airplane fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold">Доставка груза</h5>
+                            <p class="mb-0">Заключительный этап — доставка груза до назначенного пункта, его проверка на
+                                повреждения и затем выгрузка.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="images/index/containers-work.png" class="img-fluid p-3" alt="Контейнер с грузом">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our working process {mobile} -->
+    <section class="py-5 d-md-none">
+        <div class="container-fluid px-5">
+            <h2 class="fw-bold text-uppercase mb-3">Как мы работаем?</h2>
+            <p>Мы стремимся понять потребности наших клиентов и предложить им решения, которые будут <br>
+                соответствовать их
+                целям.</p>
+
+            <div class="d-flex flex-column align-items-center">
+                <div class="d-flex flex-column align-items-center mb-4">
+                    <div class="bg-danger rounded-circle text-white d-flex align-items-center justify-content-center mb-3"
+                        style="width: 80px; height: 80px;">
+                        <i class="bi bi-file-earmark-text fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold text-center">Заявка на услугу</h5>
+                    <p class="text-center">Оставьте заявку на сайте или позвоните нам по телефону. Мы свяжемся с вами и
+                        обсудим все детали перевозки груза.</p>
+                </div>
+
+                <div class="d-flex flex-column align-items-center mb-4">
+                    <div class="bg-danger rounded-circle text-white d-flex align-items-center justify-content-center mb-3"
+                        style="width: 80px; height: 80px;">
+                        <i class="bi bi-question-circle fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold text-center">Расчет стоимости</h5>
+                    <p class="text-center">Мы обсудим все нюансы транспортировки груза, подберём технику для выполнения
+                        задачи и рассчитаем стоимость услуги.</p>
+                </div>
+
+                <div class="d-flex flex-column align-items-center mb-4">
+                    <div class="bg-danger rounded-circle text-white d-flex align-items-center justify-content-center mb-3"
+                        style="width: 80px; height: 80px;">
+                        <i class="bi bi-file-earmark-check fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold text-center">Заключение договора</h5>
+                    <p class="text-center">Основной частью работы с нашими клиентами является подписание договора по
+                        получению услуги.</p>
+                </div>
+
+                <div class="d-flex flex-column align-items-center">
+                    <div class="bg-danger rounded-circle text-white d-flex align-items-center justify-content-center mb-3"
+                        style="width: 80px; height: 80px;">
+                        <i class="bi bi-airplane fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold text-center">Доставка груза</h5>
+                    <p class="text-center">Заключительный этап — доставка груза до назначенного пункта, его проверка на
+                        повреждения и затем выгрузка.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- contact form -->
+    <section class="py-5 px-5 bg-light d-none d-md-block">
+        <div class="container-fluid px-5">
+            <div class="row align-items-center ">
+                <div class="col-lg-6">
+                    <div
+                        class="bg-avia2 p-5 text-white text-start d-flex flex-column justify-content-start align-items-start px-5">
+                        <h4 class="text-white fw-bold">КОНТАКТЫ</h4>
+                        <p class="text-white">Имеются вопросы? Свяжитесь с нами</p>
+                        <div class="d-flex mb-4">
+                            <i class="bi bi-geo-alt-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">Адрес</h5>
+                                <p class="mb-0">г. Ташкент, 100019, Яккасарайский р-н, ул. А.Каххара, 9, 1
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+
+                            <i class="bi bi-telephone-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">Контактные телефоны</h5>
+                                <p class="mb-0">
+                                    +998 93 007 84 07 <br>
+                                    +998 93 007 81 07</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <i class="bi bi-envelope-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">Отдел продаж</h5>
+                                <p class="mb-0">sales@tlsgroup.uz</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="bi bi-envelope-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">По общим вопросам</h5>
+                                <p class="mb-0">info@tlsgroup.uz</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center g-3 justify-content-center mt-4">
+                            <a href="#" class="text-decoration-none text-white">
+                                <i class="bi bi-telegram fs-2 pe-3"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none text-white">
+                                <i class="bi bi-facebook fs-2 pe-3"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none text-white">
+                                <i class="bi bi-youtube  fs-2 pe-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="text-center p-5">
+                        <h4 class="text-black text-center fw-bold">ОНЛАЙН ЗАЯВКА</h4>
+                        <p class="text-center">На расчёт стоимости
+                            доставки груза</p>
+                        <form class="w-100">
+                            <div class="mb-3">
+                                <input type="text"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="departureCity" placeholder="Введите город отправления">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="destinationCity" placeholder="Введите город назначения">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="number"
+                                        class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                        id="cargoWeight" placeholder="Введите вес груза">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text"
+                                        class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                        id="cargoVolume" placeholder="Введите объем груза">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="cargoDescription" rows="3" placeholder="Введите описание груза"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="tnCode" placeholder="Введите код ТН ВЭД">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="phoneNumber" placeholder="Введите ваш номер телефона">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="emailAddress" placeholder="Введите ваш E-mail">
+                            </div>
+                            <button type="submit" class="btn btn-danger rounded-0 w-100 px-4 py-2">Отправить
+                                запрос</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact form -->
+    <section class="bg-light d-md-none">
+        <div class="container-fluid">
+            <div class="flex-column align-items-center">
+                <div class="col">
+                    <div
+                        class="bg-avia2 p-5 text-white text-start d-flex flex-column justify-content-start align-items-start px-5">
+                        <h4 class="text-white fw-bold">КОНТАКТЫ</h4>
+                        <p class="text-white">Имеются вопросы? Свяжитесь с нами</p>
+                        <div class="d-flex mb-4">
+                            <i class="bi bi-geo-alt-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">Адрес</h5>
+                                <p class="mb-0">г. Ташкент, 100019, Яккасарайский р-н, ул. А.Каххара, 9, 1
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+
+                            <i class="bi bi-telephone-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">Контактные телефоны</h5>
+                                <p class="mb-0">
+                                    +998 93 007 84 07 <br>
+                                    +998 93 007 81 07</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <i class="bi bi-envelope-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">Отдел продаж</h5>
+                                <p class="mb-0">sales@tlsgroup.uz</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="bi bi-envelope-fill fs-3"></i>
+                            <div class="ms-3">
+                                <h5 class="fw-bold">По общим вопросам</h5>
+                                <p class="mb-0">info@tlsgroup.uz</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center g-3 justify-content-center mt-4">
+                            <a href="#" class="text-decoration-none text-white">
+                                <i class="bi bi-telegram fs-2 pe-3"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none text-white">
+                                <i class="bi bi-facebook fs-2 pe-3"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none text-white">
+                                <i class="bi bi-youtube  fs-2 pe-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+
+                    <div class="text-center p-5">
+                        <h4 class="text-black text-center fw-bold">ОНЛАЙН ЗАЯВКА</h4>
+                        <p class="text-center">На расчёт стоимости
+                            доставки груза</p>
+                        <form class="w-100">
+                            <div class="mb-3">
+                                <input type="text"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="departureCity" placeholder="Введите город отправления">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="destinationCity" placeholder="Введите город назначения">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="number"
+                                        class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                        id="cargoWeight" placeholder="Введите вес груза">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text"
+                                        class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                        id="cargoVolume" placeholder="Введите объем груза">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="cargoDescription" rows="3" placeholder="Введите описание груза"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="tnCode" placeholder="Введите код ТН ВЭД">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="phoneNumber" placeholder="Введите ваш номер телефона">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email"
+                                    class="form-control border-0 border-bottom border-1 border-dark rounded-0 shadow-none"
+                                    id="emailAddress" placeholder="Введите ваш E-mail">
+                            </div>
+                            <button type="submit" class="btn btn-danger rounded-0 w-100 px-4 py-2">Отправить
+                                запрос</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- footer -->
+    <section class="bg-gray px-5 d-none d-md-block">
+        <div class="container-fluid px-5 text-white py-4">
+            <div class="row align-items-center justify-content-between px-5">
+                <div class="col-md-3 text-start">
+                    <img src="images/index/logo-footer.png" class="img-fluid w-50" alt="Transceka Logo">
+                </div>
+                <div class="col-md-6 text-center">
+                    <ul class="list-unstyled d-flex justify-content-between mb-0">
+                        <li class="mx-3"><a href="#" class="text-white text-decoration-none">Главная страница</a></li>
+                        <li class="mx-3"><a href="#about" class="text-white text-decoration-none">О компании</a></li>
+                        <li class="mx-3"><a href="#faq" class="text-white text-decoration-none">Вопросы и ответы</a>
+                        </li>
+                        <li class="mx-3"><a href="#contacts" class="text-white text-decoration-none">Контакты</a></li>
+                        <li class="mx-3"><a href="#cert" class="text-white text-decoration-none">Сертификаты</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 text-end">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="#" class="text-white text-decoration-none mx-2">
+                            <i class="bi bi-telegram fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none mx-2">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none mx-2">
+                            <i class="bi bi-youtube fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- footer -->
+     <section class="bg-gray px-5 d-md-none">
+        <div class="container-fluid px-5 text-white py-4">
+            <div class="flex-column align-items-center justify-content-between px-5">
+                <div class="col text-start">
+                    <img src="images/index/logo-footer.png" class="img-fluid w-100" alt="Transceka Logo">
+                </div>
+                
+                <div class="col text-center mt-5">
+                    <div class="d-flex justify-content-center gap-3 align-items-center">
+                        <a href="#" class="text-white text-decoration-none mx-1">
+                            <i class="bi bi-telegram fs-1"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none mx-1">
+                            <i class="bi bi-facebook fs-1"></i>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none mx-1">
+                            <i class="bi bi-youtube fs-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- js connections -->
+    <!-- jquery -->
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- slick slider -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+
+
+
+    <!-- script js -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
