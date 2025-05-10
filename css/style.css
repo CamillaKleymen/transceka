@@ -14,7 +14,7 @@
     --bg-gray: #333333;
     --bg-overlay: #BF141E;
     --light-gray: #444;
-    --bg-corp-gray: #464646; 
+    --bg-corp-gray: #464646;
 }
 
 .w-65 {
@@ -49,7 +49,7 @@ header .dropdown-menu {
 }
 
 .bg-corp-gray {
-    background-color: var(--bg-corp-gray) !important;   
+    background-color: var(--bg-corp-gray) !important;
 }
 
 .carousel-caption {
@@ -194,14 +194,14 @@ header .dropdown-menu {
 }
 
 .contact-form .form-control {
-    background-color: rgba(255, 255, 255, 0.95); 
+    background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid #ccc;
     color: #000;
 }
 
 .contact-form .form-control:focus {
     box-shadow: none;
-    border-color: #333; 
+    border-color: #333;
 }
 
 .contact-form button {
@@ -227,7 +227,7 @@ header .dropdown-menu {
 
     h5 {
         font-size: 26px;
-    }    
+    }
 
     h6 {
         font-size: 24px;
@@ -267,5 +267,27 @@ header .dropdown-menu {
 
     .clients-logos {
         height: 60px;
+    }
+
+        .contact-form {
+        background-image: url('../images/faq & contact form/form.png');
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        height: 411px;
+        position: absolute;
+        z-index: 1;
+        width: 386px;
+        right: 0;
+        top: 76%;
+    }
+
+
+
+    .main-form {
+        position: relative;
+        z-index: 2;
+        background: transparent;
+        width: 100%;
     }
 }
